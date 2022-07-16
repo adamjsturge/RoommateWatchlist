@@ -1,12 +1,14 @@
 <?php
 
-include_once('start.php');
+include_once('../private/page.php');
 
-$data = ['length' => 7];
+class index extends page {
 
-/**
- * @param string $template_name Name of twig file
- * @param array $data This will get passed to the twig file
- * @return void
- */
-start_twig('index.twig', $data);
+    protected function request() {      
+        $this->template_name = 'index';
+        $this->data['length'] = 7;
+    }
+}
+
+$run = index::getInstance();
+$run->run();

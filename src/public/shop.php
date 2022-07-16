@@ -1,12 +1,14 @@
 <?php
 
-include_once('start.php');
+include_once('../private/page.php');
 
-$data = ['length' => 7];
+class shop extends page {
 
-/**
- * @param string $template_name Name of twig file
- * @param array $data This will get passed to the twig file
- * @return void
- */
-start_twig('shop.twig', $data);
+    protected function request() {      
+        $this->template_name = 'shop';
+        $this->data['length'] = 7;
+    }
+}
+
+$run = shop::getInstance();
+$run->run();
