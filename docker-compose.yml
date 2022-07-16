@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+          DEVELOPMENT: "true"
+    volumes:
+    - ./:/var/www/html
+    ports:
+      - '9000:9000'   
+  nginx:   
+      image: nginx:latest  
+      container_name: nginx-container  
+      ports:   
+       - 80:80 
