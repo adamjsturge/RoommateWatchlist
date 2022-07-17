@@ -5,7 +5,7 @@ include_once('../private/page.php');
 class login extends page {
 
     protected function request() {      
-        $this->template_name = '404';
+        $this->set_template('404');
     }
 }
 

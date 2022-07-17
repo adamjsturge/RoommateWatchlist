@@ -4,8 +4,8 @@ include_once('../private/page.php');
 
 class login extends page {
 
-    protected function request() {      
-        $this->template_name = 'login';
+    protected function request() {  
+        $this->set_template('login');
         $this->data['thing'] = 'Loginz';
     }
 }

@@ -4,7 +4,7 @@ include_once('start.php');
 
 abstract class page {
     protected $data = [];
-    protected string $template_name;
+    private string $template_name;
 
     static $instance;
     
@@ -21,7 +21,7 @@ abstract class page {
 
     public function run() {
         if (!$this->is_auth()) {
-            $this->redirect('index');
+            $this->redirect('404');
         }
         $this->request();
         $template_name = $this->template_name;
@@ -38,6 +38,10 @@ abstract class page {
     protected function redirect($page) {
         $host  = $_SERVER['HTTP_HOST'];
         $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-        header("Location: http://$host$uri/$page.php");
+        header("Location: http://$host/$page");
+    }
+
+    protected function set_template($template_name) {
+        $this->template_name = $template_name;
     }
 }
