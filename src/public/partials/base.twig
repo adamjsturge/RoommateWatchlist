@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block script %}
+            {# <script src="javascript/script.js"></script> #}
+        {% endblock %}
+        {% block css %}
+             <link rel="stylesheet" href="css/everywhere.css">
+        {% endblock %}
+        {% block head %}
+            {% include 'header.twig' %}
+            <title>{% block title %}{% endblock %}</title>
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+        {% block footer %}{% include 'footer.twig' %}{% endblock %}
+    </body>
+</html>s
