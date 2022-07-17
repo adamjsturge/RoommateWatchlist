@@ -1,2 +1,3 @@
 #!/bin/bash
-../src/vendor/bin/phinx $1
+cd "${0%/*}"/../src
+vendor/bin/phinx $1
