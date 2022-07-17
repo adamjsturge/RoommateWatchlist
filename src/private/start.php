@@ -8,7 +8,7 @@ function connect_twig()
     require_once(dirname(__FILE__). '/../vendor/autoload.php');
 
     $options = array(
-        'path' => '../public',
+        'path' => '../public/twig',
         'cache' => '/tmp/',
         'auto_reload' => true,
     );
