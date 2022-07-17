@@ -3,12 +3,7 @@ touch ../.env
 mkdir ../logs
 mkdir ../logs/nginx
 
-printf "PG_DB_NAME=testdb
+printf "PG_DB_NAME=main
 PG_DB_USER=myuser
-PG_DB_PASSWORD=mypassword
-
-MY_DB_NAME=testdb
-MY_DB_USER=myuser
-MY_DB_PASSWORD=mypassword
-MY_DB_ROOT_PASSWORD=myrootpassword"> ../.env
+PG_DB_PASSWORD=mypassword"> ../.env
 
