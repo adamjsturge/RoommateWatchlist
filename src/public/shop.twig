@@ -1,18 +1,6 @@
- <!DOCTYPE html>
-<html lang="en">
-<meta charset="UTF-8">
-<title>Page Title</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="">
-<style>
-</style>
-<script src="javascript/script.js"></script>
-<body>
+{% extends "partials/base.twig" %}
 
-<div class="">
- <h1>Welcome to the shop</h1>
-
-</div>
-
-</body>
-</html> 
+{% block title %}Shop{% endblock %}
+{% block content %}
+     <h1>Welcome to the shop</h1>
+{% endblock %}

@@ -2,18 +2,18 @@
 <html>
     <head>
         {% block script %}
-            {# <script src="javascript/script.js"></script> #}
+            <script src="javascript/script.js"></script>
         {% endblock %}
         {% block css %}
              <link rel="stylesheet" href="css/everywhere.css">
         {% endblock %}
         {% block head %}
-            {% include 'header.twig' %}
+            {% include 'partials/header.twig' %}
             <title>{% block title %}{% endblock %}</title>
         {% endblock %}
     </head>
     <body>
         {% block content %}{% endblock %}
-        {% block footer %}{% include 'footer.twig' %}{% endblock %}
+        {% block footer %}{% include 'partials/footer.twig' %}{% endblock %}
     </body>
 </html>s

@@ -24,6 +24,7 @@ function connect_twig()
 }
 
 function start_twig(string $template_name, array $data){
+    $full = ['data' => $data];
     $twig = connect_twig();
     $template = $twig->loadTemplate($template_name);
     echo $template->render($data);
