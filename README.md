@@ -10,10 +10,6 @@
 ![GitHub](https://img.shields.io/github/license/mbelchin/docker-php-nginx-mysql-postgres-composer.svg)
 ![GitHub release](https://img.shields.io/github/release/mbelchin/docker-php-nginx-mysql-postgres-composer.svg)
 
-[![Twitter](https://img.shields.io/twitter/url/https/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fmbelchin%2Fdocker-php-nginx-mysql-postgres-composer&hashtags=docker,docker-compose,php,php7,nginx,mysql,mysql8,postgres,postgres13,composer,symfony)
-
-*Read this in other languages: [English](README.md), [Español](README.es.md).*
-
 ## Overview
 
 This Docker Compose configuration allows you to run PHP 7.4 with nginx 1.18, PHP-FPM, MySQL 8.0.23, PostgreSQL 13.1, Composer and Symfony.
