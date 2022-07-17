@@ -1,14 +1,16 @@
 <?php
 
-include_once('../private/page.php');
+$request = substr($_SERVER['REQUEST_URI'], 1);
 
-class index extends page {
+$whitelist = [
+    'login' => 1,
+    'shop' => 1,
+    'signup' => 1,
+];
 
-    protected function request() {      
-        $this->template_name = 'index';
-        $this->data['length'] = 7;
-    }
+
+if (!empty($whitelist[$request])) {
+    require __DIR__ . "/../private/pages/$request.php";
+} else {
+    require __DIR__ . "/../private/pages/404.php";
 }
-
-$run = index::getInstance();
-$run->run();
