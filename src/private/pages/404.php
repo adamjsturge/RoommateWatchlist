@@ -1,6 +1,6 @@
 <?php
 
-include_once('../private/page.php');
+include_once(__DIR__ . '/../page.php');
 
 class not_found extends page {
 
