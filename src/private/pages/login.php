@@ -6,7 +6,7 @@ class login extends page {
 
     protected function request() {  
         $this->set_template('login');
-        $this->data['thing'] = 'Loginz';
+        $this->data['thing'] = 'Login';
     }
 }
 

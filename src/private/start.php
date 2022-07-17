@@ -17,7 +17,7 @@ function connect_twig()
     $twig = new \Twig\Environment($loader, [
         'cache' => $options['cache'],
         'auto_reload' => $options['auto_reload'],
-        'autoescape' => true,
+        'autoescape' => 'html',
     ]);
 
     return $twig;
@@ -26,6 +26,6 @@ function connect_twig()
 function start_twig(string $template_name, array $data){
     $full = ['data' => $data];
     $twig = connect_twig();
-    $template = $twig->loadTemplate($template_name);
-    echo $template->render($data);
+    $template = $twig->load($template_name);
+    echo $template->render($full);
 }

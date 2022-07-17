@@ -2,7 +2,7 @@
 
 > Docker Compose configuration to run PHP, mginx, PHP-FPM, MySQL, PostgreSQL, Composer and Symfony
 
-- PHP 7.4.14
+- PHP 8.1.0
 - nginx 1.18
 - MySQL 8.0.23
 - PostgreSQL 13.1
