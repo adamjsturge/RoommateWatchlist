@@ -129,7 +129,7 @@ class ComposerStaticInit00bca7560008aba9ca44ebd7bfe2f737
         ),
         'AS\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/private/library',
+            0 => __DIR__ . '/../..' . '/private/library',
         ),
     );
 
