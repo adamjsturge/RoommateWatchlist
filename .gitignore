@@ -2,4 +2,5 @@ logs/nginx/*
 logs/php/*
 mysql/data/*
 postgres/data/*
+src/config.php
 .env

@@ -23,7 +23,7 @@ final class InitialMigration extends AbstractMigration
         $table = $this->table('users');
         $table->addColumn('email', 'string')
             ->addColumn('password', 'string')
-            ->addColumn('username', 'datetime')
+            ->addColumn('username', 'string')
             ->addIndex(['username', 'email'], ['unique' => true])
             ->create();
     }

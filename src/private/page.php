@@ -4,6 +4,7 @@ include_once('start.php');
 
 abstract class page {
     protected $data = [];
+    protected $conf = [];
     private string $template_name;
 
     static $instance;

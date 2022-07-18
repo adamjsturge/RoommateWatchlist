@@ -1,9 +1,12 @@
 #!/bin/bash
-touch ../.env
-mkdir ../logs
-mkdir ../logs/nginx
+cd "${0%/*}"/..
+touch .env
+mkdir logs
+mkdir logs/nginx
+
+cp src/config.php.copy src/config.php
 
 printf "PG_DB_NAME=main
 PG_DB_USER=myuser
-PG_DB_PASSWORD=mypassword"> ../.env
+PG_DB_PASSWORD=mypassword"> .env
 
