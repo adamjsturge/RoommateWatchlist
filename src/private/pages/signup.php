@@ -1,11 +1,11 @@
 <?php
 
-include_once(__DIR__ . '/../page.php');
 include_once(__DIR__ . '/../library/maindb.php');
 include_once(__DIR__ . '/../library/userauth.php');
 
 use library\maindb;
 use library\userauth;
+use infra\page;
 
 class signup extends page {
 
@@ -22,6 +22,3 @@ class signup extends page {
         }
     }
 }
-
-$run = signup::getInstance();
-$run->run();

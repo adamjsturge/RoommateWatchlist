@@ -1,6 +1,6 @@
 <?php
 
-include_once(__DIR__ . '/../page.php');
+use infra\page;
 
 class shop extends page {
 
@@ -9,6 +9,3 @@ class shop extends page {
         $this->data['length'] = 7;
     }
 }
-
-$run = shop::getInstance();
-$run->run();

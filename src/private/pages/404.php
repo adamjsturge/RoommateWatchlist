@@ -1,6 +1,6 @@
 <?php
 
-include_once(__DIR__ . '/../page.php');
+use infra\page;
 
 class not_found extends page {
 
@@ -8,6 +8,3 @@ class not_found extends page {
         $this->set_template('404');
     }
 }
-
-$run = not_found::getInstance();
-$run->run();

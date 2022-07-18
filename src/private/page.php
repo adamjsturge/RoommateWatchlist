@@ -1,5 +1,7 @@
 <?php
 
+namespace infra;
+
 include_once('start.php');
 
 abstract class page {
@@ -9,7 +11,7 @@ abstract class page {
 
     static $instance;
     
-    private function __construct() {
+    public function __construct() {
     }
     
     public static function getInstance() {

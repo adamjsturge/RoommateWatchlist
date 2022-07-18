@@ -1,6 +1,6 @@
 <?php
 
-include_once(__DIR__ . '/../page.php');
+use infra\page;
 
 class login extends page {
 
@@ -9,6 +9,3 @@ class login extends page {
         $this->data['thing'] = 'Login';
     }
 }
-
-$run = login::getInstance();
-$run->run();
