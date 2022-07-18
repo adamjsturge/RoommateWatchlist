@@ -1,6 +1,6 @@
 <?php
 
-namespace infra;
+namespace AS\infra;
 
 include_once('start.php');
 

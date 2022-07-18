@@ -2,5 +2,10 @@
     "require": {
         "twig/twig": "^3.0",
         "robmorgan/phinx": "^0.12.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "AS\\" : "src/private/library/"
+        }
     }
 }

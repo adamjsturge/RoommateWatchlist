@@ -48,6 +48,10 @@ class ComposerStaticInit00bca7560008aba9ca44ebd7bfe2f737
             'Cake\\Database\\' => 14,
             'Cake\\Core\\' => 10,
         ),
+        'A' => 
+        array (
+            'AS\\' => 3,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -122,6 +126,10 @@ class ComposerStaticInit00bca7560008aba9ca44ebd7bfe2f737
         'Cake\\Core\\' => 
         array (
             0 => __DIR__ . '/..' . '/cakephp/core',
+        ),
+        'AS\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/private/library',
         ),
     );
 

@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__ . "/../private/page.php");
+require_once(__DIR__ . "/../private/library/page.php");
 require_once(dirname(__FILE__). '/../vendor/autoload.php');
 
 $request = substr($_SERVER['REQUEST_URI'], 1);

@@ -1,6 +1,6 @@
 <?php
 
-namespace library;
+namespace AS\library;
 use PDO; 
 
 class maindb extends PDO {

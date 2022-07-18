@@ -1,9 +1,9 @@
 <?php
 
-namespace library;
+namespace AS\library;
 include_once(__DIR__ . '/../library/maindb.php');
 
-use library\maindb;
+use AS\library\maindb;
 
 class userauth {
     /**

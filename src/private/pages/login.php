@@ -1,6 +1,6 @@
 <?php
 
-use infra\page;
+use AS\infra\page;
 
 class login extends page {
 

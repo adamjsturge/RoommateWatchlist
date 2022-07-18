@@ -3,9 +3,9 @@
 include_once(__DIR__ . '/../library/maindb.php');
 include_once(__DIR__ . '/../library/userauth.php');
 
-use library\maindb;
-use library\userauth;
-use infra\page;
+use AS\library\maindb;
+use AS\library\userauth;
+use AS\infra\page;
 
 class signup extends page {
 
