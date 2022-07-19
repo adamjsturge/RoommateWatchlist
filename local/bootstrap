@@ -9,4 +9,5 @@ cp src/config.php.copy src/config.php
 printf "PG_DB_NAME=main
 PG_DB_USER=myuser
 PG_DB_PASSWORD=mypassword"> .env
-
+#yum install php-pgsql php-pdo_pgsql
+#Install this if Phinx is broken on Fedora/Centos
