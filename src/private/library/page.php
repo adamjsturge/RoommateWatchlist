@@ -8,6 +8,7 @@ abstract class page {
     protected $data = [];
     protected $conf = [];
     private string $template_name;
+    private string $auth_redirect = '404';
 
     static $instance;
     
@@ -24,7 +25,7 @@ abstract class page {
 
     public function run() {
         if (!$this->is_auth()) {
-            $this->redirect('404');
+            $this->redirect($this->auth_redirect);
         }
         $this->request();
         $template_name = $this->template_name;
@@ -46,5 +47,9 @@ abstract class page {
 
     protected function set_template($template_name) {
         $this->template_name = $template_name;
+    }
+
+    protected function set_redirect($auth_redirect) {
+        $this->auth_redirect = $auth_redirect;
     }
 }
