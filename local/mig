@@ -1,3 +1,2 @@
 #!/bin/bash
-cd "${0%/*}"/../src
-vendor/bin/phinx $1
+docker-compose exec php-fpm vendor/bin/phinx $1

@@ -20,7 +20,7 @@ return
         // ],
         'development' => [ // Setip way to store in config
             'adapter' => 'pgsql',
-            'host' => 'localhost',
+            'host' => 'postgres',
             'name' => 'main',//'%%PHINX_DBNAME%%',
             'user' => 'myuser',//''%%PHINX_DBUSER%%',
             'pass' => 'mypassword',//''%%PHINX_DBPASS%%',
