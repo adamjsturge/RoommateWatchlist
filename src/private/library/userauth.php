@@ -25,12 +25,21 @@ class userauth {
         return ['result' => 'success', 'user_id' => $result['id']];
     }
 
-    static function login(string $password): array {
-        $password_hash = '';//Get password hash from DB
+    static function login(string $password, string $username): array {
+        if (empty($username) || empty($password)) {
+            return ['result' => 'error'];
+        }
+        $db = new maindb;
+        $query = $db->prepare('SELECT password, id FROM users WHERE username = :username');
+        $query->execute([':username' => $username]);
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+        $password_hash = $result['password'];//Get password hash from DB
         password_verify($password, $password_hash);
 
-        return [];
+        return ['result' => 'success', 'user_id' => $result['id']];
     }
+
+    
 
     static function creds_in_use(string $email, string $username): bool {
         //Check if email or username are in us

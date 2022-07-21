@@ -20,11 +20,6 @@ class signup extends page {
             } else {
                 $this->data['error'] = 'Something went wrong';
             }
-        } else {
-            $db = new maindb;
-            $row = $db->query("SELECT email FROM users WHERE username = 'adamjsturge'");
-            $results = $row->fetchColumn();
-            $this->data['thing'] = $results;
         }
     }
 

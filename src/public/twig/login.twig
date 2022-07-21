@@ -2,5 +2,12 @@
 
 {% block title %}Login{% endblock %}
 {% block content %}
-     <h1>Welcome to the {{ data.thing }}</h1>
+     <h1>Welcome, {{ data.thing }}</h1>
+     <form action="login" method="post">
+          <label for="username">Username</label><br>
+          <input type="text" name="username"><br>
+          <label for="password">Password</label><br>
+          <input type="password" name="password"><br>
+          <input type="submit">
+     </form>
 {% endblock %}
