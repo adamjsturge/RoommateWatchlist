@@ -12,7 +12,7 @@ $whitelist = [ //Key is the url and value is the classname of file
     'login' => 'login',
     'shop' => 'shop',
     'signup' => 'signup',
-    'profilt' => 'profile'
+    'profile' => 'profile'
 ];
 
 
