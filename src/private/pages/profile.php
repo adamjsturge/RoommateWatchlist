@@ -12,8 +12,10 @@ class profile extends page {
         $this->set_template('profile');
 
         $db = new maindb;
-        $row = $db->query("SELECT email FROM users WHERE username = 'rarson'");
-        $results = $row->fetchColumn();
+        $query = $db->prepare('SELECT email FROM users WHERE id = :id');
+        $query->execute([':id' => $_SESSION['user_id']]);
+        $results = $query->fetchColumn();
+        
         $this->data['email'] = $results;
     }
 }
