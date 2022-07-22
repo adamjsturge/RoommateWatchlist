@@ -2,8 +2,14 @@
 
 {% block title %}Profile{% endblock %}
 {% block content %}
-     <h1>Welcome To Profile</h1>
+<div class="profile-container">
+     <div class="profile-header-container">
+          <h1>Welcome To Profile</h1>
+          <button class="sign-out-button">Sign Out</button>
+     </div>
      <h2>Your email is {{ data.email }}</h2>
+
+</div>
 {% endblock %}
 
 {# print email and username #}

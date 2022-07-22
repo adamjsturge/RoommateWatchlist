@@ -34,9 +34,13 @@ class userauth {
         $query->execute([':username' => $username]);
         $result = $query->fetch(PDO::FETCH_ASSOC);
         $password_hash = $result['password'];//Get password hash from DB
-        password_verify($password, $password_hash);
+        if (password_verify($password, $password_hash)) {
+            return ['result' => 'success', 'user_id' => $result['id']];
+        } else {
+            return ['result' => 'error'];
+        };
 
-        return ['result' => 'success', 'user_id' => $result['id']];
+        
     }
 
     
