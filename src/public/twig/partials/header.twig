@@ -2,8 +2,8 @@
 {% if _SESSION.logged_in %}
     <div class="header-container">
         <div class="nav-header">
-            <h1 class="name-of-page">{{ data.pageTitle }}</h1>
-            <h1 class="groups">My Groups</h1>
+            <a class="name-of-page nav" href="/profile">My Profile</a>
+            <a class="groups nav" href="/groups">My Groups</a>
         </div>
         <button class="sign-out-button">Sign Out</button>
     </div>

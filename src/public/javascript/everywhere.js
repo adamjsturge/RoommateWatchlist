@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', function() {
           window.location.href = '/logout'
      } 
      if (signOutButton) {
-        signOutButton.addEventListener('click', logout);
+          signOutButton.addEventListener('click', logout);
      }
-    
+
 })

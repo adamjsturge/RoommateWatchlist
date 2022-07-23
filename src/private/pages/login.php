@@ -23,4 +23,9 @@ class login extends page {
             }
         }
     }
+
+    protected function is_auth() {
+        $this->set_redirect('profile');
+        return empty($_SESSION['logged_in']);
+    }
 }
