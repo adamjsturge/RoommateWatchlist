@@ -1,0 +1,44 @@
+<?php
+
+include_once(__DIR__ . '/../library/maindb.php');
+
+use AS\library\maindb;
+use AS\infra\api;
+
+
+class add_group_member extends api {
+
+    protected function request() {
+        if($_POST) {
+            $this->add_group_member();
+        }
+    }
+
+    protected function add_group_member() {
+        $db = new maindb;
+        $group_id = $_POST['group_id'];
+        $user_id = $_SESSION['user_id'];
+
+        //Make sure the group memeber isn't already in the group
+        $query = $db->prepare('
+            select 1 
+                from group_members
+                where group_id = :group_id
+                and user_id = :user_id;');
+        $query->execute([':group_id' => $group_id, ':user_id' => $user_id]);
+        $results = $query->fetchAll();
+
+        if(!empty($results)) {
+            $this->response['error'] = 'You are already in this group.';
+            return;
+        }
+
+        $query = $db->prepare('
+            insert into group_members (group_id, user_id)
+            values (:group_id, :user_id) on duplicate ;');
+        $query->execute([':group_id' => $group_id, ':user_id' => $user_id]);
+
+        $this->response['success'] = 'You have been added to the group.';
+        return;
+    }
+}
