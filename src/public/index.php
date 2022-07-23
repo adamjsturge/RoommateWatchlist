@@ -9,7 +9,7 @@ $is_api = str_starts_with($_SERVER['REQUEST_URI'], '/api/');
 
 $magic_number = $is_api ? 5 : 1;
 
-$request = substr($_SERVER['REQUEST_URI'], 1);
+$request = substr($_SERVER['REQUEST_URI'], $magic_number);
 
 $whitelist = [ //Key is the url and value is the classname of file
     '404' => 'not_found',
@@ -22,7 +22,7 @@ $whitelist = [ //Key is the url and value is the classname of file
 ];
 
 $api_whitelist = [ //Key is the url and value is the classname of file
-    'add_group_member' => 'add_group_member',
+    'add_group_members' => 'add_group_members',
     'add_group' => 'add_group',
 ];
 
@@ -35,7 +35,14 @@ if (!$is_api && empty($whitelist[$request])) {
 if ($is_api && empty($api_whitelist[$request])) {
     $not_found = true;
 }
-$classname = $whitelist[$request]?? 'not_found';
+
+if ($is_api) {
+    $classname = $api_whitelist[$request]?? 'not_found';
+} else {
+    $classname = $whitelist[$request]?? 'not_found';
+}
+
+
 // if (!is_subclass_of($classname, 'infra\page')) {
 //     $not_found = true;
 // }
@@ -50,7 +57,7 @@ if (!$not_found) {
     $page->run();
 } else {
     if ($is_api) {
-        echo json_encode(['error' => 'API not found.']);
+        echo json_encode(['error' => 'API endpoint not found.']);
     } else {
         require_once(__DIR__ . "/../private/pages/404.php");
         $page = new not_found; 
