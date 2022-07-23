@@ -6,10 +6,21 @@ use AS\library\maindb;
 use AS\infra\api;
 
 
-class add_group_member extends api {
+class add_group_members extends api {
 
     protected function request() {
+        if (!$this->validate_request() || empty($_POST)) {
+            $this->response['error'] = 'Invalid request.';
+            return;
+        }
         $this->add_group_member();
+    }
+
+    protected function validate_request() {
+        if (empty($_POST['group_id']) || isset($_POST['members'])) {
+            return false;
+        }
+        return true;
     }
 
     protected function add_group_member() {

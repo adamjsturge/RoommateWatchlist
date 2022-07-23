@@ -14,4 +14,8 @@ abstract class api extends page {
         $this->request();
         echo json_encode($this->response);
     }
+
+    protected function validate_request() {
+        return true;
+    }
 }

@@ -1,6 +1,7 @@
 <?php
 
 require_once(__DIR__ . "/../private/library/page.php");
+require_once(__DIR__ . "/../private/library/page.php");
 require_once(dirname(__FILE__). '/../vendor/autoload.php');
 
 session_start(); //session_destroy(); To logout someone
