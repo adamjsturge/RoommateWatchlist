@@ -5,10 +5,10 @@ include_once(__DIR__ . '/../library/maindb.php');
 use AS\library\maindb;
 use AS\infra\page;
 
-class groups extends page {
+class my_groups extends page {
 
     protected function request() {  
-        $this->set_template('groups');
+        $this->set_template('my_groups');
         $this->data['pageTitle'] = 'My Groups';
 
         $db = new maindb;

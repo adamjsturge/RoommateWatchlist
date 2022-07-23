@@ -14,7 +14,7 @@ $whitelist = [ //Key is the url and value is the classname of file
     'signup' => 'signup',
     'profile' => 'profile',
     'logout' => 'logout',
-    'groups' => 'groups'
+    'my_groups' => 'my_groups'
 ];
 
 
@@ -22,7 +22,7 @@ $not_found = false;
 if (empty($whitelist[$request])) {
     $not_found = true;
 }
-$classname = $whitelist[$request];
+$classname = $whitelist[$request]?? 'not_found';
 // if (!is_subclass_of($classname, 'infra\page')) {
 //     $not_found = true;
 // }

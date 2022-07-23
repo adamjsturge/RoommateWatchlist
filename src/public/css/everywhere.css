@@ -85,7 +85,7 @@ hr {
     display: flex;
 }
 
-.groups {
+.my-groups {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -106,4 +106,38 @@ hr {
 .nav:hover {
     transition: ease-in-out .3s;
     background-color: rgb(161, 183, 191);
+}
+
+ul {
+    padding-inline-start: 0;
+    width: 80%;
+}
+
+.my-group-list {
+    background-color: rgb(206, 206, 206);
+    list-style: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.my-groups-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.new-my-group-button {
+    margin-top: 2rem;
+    width: 8rem;
+    padding: .25rem;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: rgb(187, 187, 187);
+}
+
+.new-group-button:hover {
+    transition: ease-in-out .3s;
+    cursor: pointer;
+    background-color: rgb(173, 173, 173);
 }
