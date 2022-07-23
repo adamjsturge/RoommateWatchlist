@@ -39,11 +39,11 @@ class userauth {
         } else {
             return ['result' => 'error'];
         };
-
-        
     }
 
-    
+    static function logout(): void {
+        session_destroy();
+    }
 
     static function creds_in_use(string $email, string $username): bool {
         //Check if email or username are in us
@@ -54,5 +54,7 @@ class userauth {
 
         return !empty($result);
     }
+
+    
 
 }

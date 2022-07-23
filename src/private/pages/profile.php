@@ -17,6 +17,5 @@ class profile extends page {
         $results = $query->fetchColumn();
         
         $this->data['email'] = $results;
-        // $('.sign-out-button').click(userauth::logout)
     }
 }

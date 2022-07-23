@@ -27,7 +27,7 @@ function connect_twig()
 }
 
 function start_twig(string $template_name, array $data){
-    $full = ['data' => $data];
+    $full = ['data' => $data, '_SESSION' => $_SESSION];
     $twig = connect_twig();
     $template = $twig->load($template_name);
     echo $template->render($full);

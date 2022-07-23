@@ -8,11 +8,13 @@
              <link rel="stylesheet" href="css/everywhere.css">
         {% endblock %}
         {% block head %}
-            {% include 'partials/header.twig' %}
             <title>{% block title %}{% endblock %}</title>
         {% endblock %}
     </head>
     <body>
+        {% block header %}
+            {% include 'partials/header.twig' %}
+        {% endblock %}
         {% block content %}{% endblock %}
         {% block footer %}{% include 'partials/footer.twig' %}{% endblock %}
     </body>
