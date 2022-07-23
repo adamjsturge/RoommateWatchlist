@@ -5,9 +5,7 @@
 
 {% block content %}
 <div class="my-groups-container">
-    <div>  
-        <button class="new-my-group-button">New Group</button>
-    </div>
+    <a href="/add_group" class="new-my-group-button">New Group</a>
      <ul>
         {% for group in data.groups %}
             <li class="my-group-list">

@@ -19,7 +19,8 @@ $whitelist = [ //Key is the url and value is the classname of file
     'signup' => 'signup',
     'profile' => 'profile',
     'logout' => 'logout',
-    'my_groups' => 'my_groups'
+    'my_groups' => 'my_groups',
+    'add_group' => 'add_group'
 ];
 
 $api_whitelist = [ //Key is the url and value is the classname of file

@@ -1,0 +1,17 @@
+{% extends "partials/base.twig" %}
+
+{% block title %}New Group{% endblock %}
+
+
+{% block content %}
+<div class="new-group-container">
+    <form method="POST" action="#" class="new-group-form">
+        <label for="new-group-name">Group Name</label>
+        <input class="new-group-input" name="new-group-name" required>
+        <input class="new-group-submit" type="submit">
+    </form>
+</div>
+{% endblock %}
+
+
+{# print email and username #}
