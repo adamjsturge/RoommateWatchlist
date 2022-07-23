@@ -9,7 +9,7 @@ abstract class api extends page {
 
     public function run() {
         if (!$this->is_auth()) {
-            $this->redirect($this->auth_redirect);
+            echo json_encode(['error' => 'You are not authorized to access this page.']);
         }
         $this->request();
         echo json_encode($this->response);
