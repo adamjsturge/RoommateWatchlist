@@ -9,9 +9,7 @@ use AS\infra\api;
 class add_group_member extends api {
 
     protected function request() {
-        if($_POST) {
-            $this->add_group_member();
-        }
+        $this->add_group_member();
     }
 
     protected function add_group_member() {
