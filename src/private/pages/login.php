@@ -19,7 +19,7 @@ class login extends page {
                 $_SESSION['user_id'] = $results['user_id'];
                 $this->redirect("profile");
             } else {
-                $this->data['error'] = 'Something went wrong';
+                $this->data['error'] = true;
             }
         }
     }
