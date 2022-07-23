@@ -10,6 +10,7 @@ class profile extends page {
 
     protected function request() {  
         $this->set_template('profile');
+        $this->data['pageTitle'] = 'My Profile';
 
         $db = new maindb;
         $query = $db->prepare('SELECT email FROM users WHERE id = :id');

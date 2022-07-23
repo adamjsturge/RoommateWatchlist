@@ -1,9 +1,12 @@
 
 {% if _SESSION.logged_in %}
     <div class="header-container">
-        <div><h1 class="name-of-page">Name of Page</h1></div>
-        <div></div>
+        <div class="nav-header">
+            <h1 class="name-of-page">{{ data.pageTitle }}</h1>
+            <h1 class="groups">My Groups</h1>
+        </div>
         <button class="sign-out-button">Sign Out</button>
     </div>
+    <hr>
     {# <h1>{{ data }}</h1> #}
 {% endif %}

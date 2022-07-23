@@ -10,7 +10,7 @@ body {
     font-size: 1.5rem;
     border-radius: .5rem;
     border: none;
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(187, 187, 187);
 }
 
 .sign-out-button:hover {
@@ -26,6 +26,7 @@ body {
 .name-of-page {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-right: 3rem;
 }
 
 .login-body {
@@ -74,4 +75,17 @@ body {
 
 .login-input:focus {
     outline: .1rem solid rgb(176, 176, 176);
+}
+
+hr {
+    border: 1px solid rgb(187, 187, 187);
+}
+
+.nav-header {
+    display: flex;
+}
+
+.groups {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
